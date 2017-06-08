@@ -6,6 +6,7 @@ let package = Package(
     name: "CLibdill",
     pkgConfig: "libdill",
     providers: [
-        .Brew("libdill")
+        .Brew("libdill"),
+        .Apt("libdill"),
     ]
 )
