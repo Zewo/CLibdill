@@ -1,4 +1,4 @@
 module CLibdill [system] {
-    header "libdill.h"
+    header "clibdill.h"
     link "dill"
 }
