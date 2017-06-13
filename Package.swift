@@ -1,4 +1,4 @@
-// swift-tools-version:3.1
+// swift-tools-version:4.0
 
 import PackageDescription
 
@@ -6,7 +6,7 @@ let package = Package(
     name: "CLibdill",
     pkgConfig: "libdill",
     providers: [
-        .Brew("libdill"),
-        .Apt("libdill"),
+        .brew(["libdill"]),
+        .apt(["libdill"])
     ]
 )
