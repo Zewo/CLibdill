@@ -1,12 +1,14 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.0
 
 import PackageDescription
 
 let package = Package(
     name: "CLibdill",
-    pkgConfig: "libdill",
-    providers: [
-        .brew(["libdill"]),
-        .apt(["libdill"])
+    products: [
+        .library(name: "CLibdill", type: .static, targets: ["CLibdill"]),
+    ],
+    targets: [
+        .target(name: "CLibdill"),
+        .testTarget(name: "CLibdillTests", dependencies: ["CLibdill"]),
     ]
 )
